@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOR MY PRETTY BABY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- COURTING PAGE -->
+<div id="courtPage" class="page">
+
+  <section class="welcome">
+    <h1>Hi, <span id="herName">BAJE</span> ♡</h1>
+    <p>I have something to tell you baby.</p>
+  </section>
+
+  <section class="court-content">
+
+    <div class="reason">
+      <h2>Why I want to court you</h2>
+      <p>
+        I want to court you kasii gusto kita ehhh, andd syempre gusto pa kita makilala ng lubos diba. 
+        Pero hindi kita minamadali ah kung hindi pa ikaw ready its okay lang i can hintay naman you ehh kahit gano pa katagal yan.
+        And gusto ko ipakita sayo lahat kung gano kita kamahal,
+      </p>
+    </div>
+
+    <div class="center-photo">
+      <img src="images/couple.jpg" alt="Our picture">
+    </div>
+
+    <div class="promise">
+      <h2>Why i want to court you</h2>
+      <p>
+        kung gano kita nirerespeto, and na a-appreciate baby ko.
+        Handa akong ibigay lahat ng oras ko sayo, at syempre maging consistent pa rin ako. 
+        Yun lang naman po heheheheh wala na kasi akong masabi pa ehh <b>I LOVE YOU SOO MUCHH MWUAHHH</b>
+      </p>
+    </div>
+
+  </section>
+
+  <section class="question-box">
+    <p class="small-text">and here's the question...</p>
+    <h1>Can I court you, pretty? 💗</h1>
+
+    <div class="buttons">
+      <button id="yesBtn">YES ♡</button>
+      <button id="noBtn">NO</button>
+    </div>
+
+    <div id="sadDog" class="hidden">
+      <div class="dog">
+
+ <div class="center-photo">
+      <img src="arf.jpg" alt="Our picture">
+    </div>
+
+      </div>
+      <p>It's okay. I'll respect your answer.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- COUPLE WEBSITE -->
+<div id="couplePage" class="page hidden">
+
+  <header>
+    <h2 id="coupleHeader">You ♡ Me</h2>
+
+    <nav>
+      <button onclick="showTab('home')">Home</button>
+      <button onclick="showTab('memories')">Memories</button>
+      <button onclick="showTab('letters')">Love Letters</button>
+      <button onclick="showTab('dates')">Special Dates</button>
+      <button onclick="showTab('bucket')">Bucket List</button>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="tab">
+
+    <div class="home-card">
+      <img src="images/couple.jpg" class="home-photo">
+
+      <p class="small-text">my favorite memories are with you</p>
+
+      <h1 id="names">You ♡ Her</h1>
+
+      <div class="counter-container">
+
+        <div class="counter-card">
+          <h2 id="meetCountdown">0</h2>
+          <p>Days Until We Meet</p>
+        </div>
+
+        <div class="counter-card">
+          <h2 id="togetherDays">245</h2>
+          <p>Days Together</p>
+        </div>
+
+      </div>
+
+      <div class="daily-message">
+        <h3>Daily Message ♡</h3>
+        <p id="dailyMessage"></p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MEMORIES -->
+  <section id="memories" class="tab hidden">
+
+    <h1>Our Memories 📸</h1>
+
+    <div class="form-card">
+      <h3>Add a memory</h3>
+
+      <input type="file" id="memoryFile" accept="image/*">
+      <input type="text" id="memoryCaption" placeholder="Write a caption...">
+
+      <label>
+        <input type="checkbox" id="favoriteMemory">
+        Favorite memory ♡
+      </label>
+
+      <button onclick="addMemory()">Save Memory</button>
+    </div>
+
+    <h2>All Memories</h2>
+    <div id="memoryGallery" class="gallery"></div>
+
+    <h2>Favorite Moments ♡</h2>
+    <div id="favoriteGallery" class="gallery"></div>
+
+  </section>
+
+  <!-- LOVE LETTERS -->
+  <section id="letters" class="tab hidden">
+
+    <h1>Love Letters 💌</h1>
+
+    <div class="form-card">
+      <h3>Write a letter</h3>
+
+      <input id="letterTitle" placeholder="Letter title">
+
+      <select id="letterSender">
+        <option value="You">From me</option>
+        <option value="Her">From her</option>
+      </select>
+
+      <textarea id="letterContent" placeholder="Write your letter here..."></textarea>
+
+      <button onclick="saveLetter()">Save Letter</button>
+    </div>
+
+    <div class="form-card">
+      <h3>Surprise Messages 🎁</h3>
+      <input id="surpriseTitle" placeholder="Message title">
+      <textarea id="surpriseContent" placeholder="Your surprise message"></textarea>
+      <button onclick="saveSurprise()">Save Surprise</button>
+    </div>
+
+    <div class="form-card">
+      <h3>Reasons Why I Love You</h3>
+      <textarea id="reasonContent" placeholder="Write a reason..."></textarea>
+      <button onclick="saveReason()">Save Reason</button>
+    </div>
+
+    <div id="letterGallery"></div>
+    <div id="surpriseGallery"></div>
+    <div id="reasonGallery"></div>
+
+  </section>
+
+  <!-- SPECIAL DATES -->
+  <section id="dates" class="tab hidden">
+
+    <h1>Our Special Dates 📅</h1>
+
+    <div class="form-card">
+      <h3>Add an important date</h3>
+
+      <input id="dateTitle" placeholder="First meeting, first date, etc.">
+      <input type="date" id="dateInput">
+
+      <button onclick="addDate()">Save Date</button>
+    </div>
+
+    <div id="dateGallery"></div>
+
+    <div class="form-card">
+      <h3>Monthsary Countdown ♡</h3>
+      <label>Our start date:</label>
+      <input type="date" id="startDate">
+
+      <button onclick="saveStartDate()">Save Start Date</button>
+
+      <h2 id="monthsaryCountdown"></h2>
+    </div>
+
+  </section>
+
+  <!-- BUCKET LIST -->
+  <section id="bucket" class="tab hidden">
+
+    <h1>Our Bucket List 🌷</h1>
+
+    <div class="form-card">
+
+      <select id="bucketCategory">
+        <option>Places to Visit</option>
+        <option>Things to Do Together</option>
+        <option>Dreams to Achieve</option>
+      </select>
+
+      <input id="bucketItem" placeholder="Our dream...">
+
+      <button onclick="addBucket()">Add to Bucket List</button>
+
+    </div>
+
+    <div id="bucketGallery"></div>
+
+  </section>
+
+  <footer>Made with care ♡</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff4f7;
+    color: #674555;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #a64d73;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+button {
+    background: #d47798;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #b7557b;
+    transform: translateY(-2px);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ebc6d5;
+    border-radius: 12px;
+    margin: 10px 0;
+    font-family: inherit;
+    background: white;
+    color: #674555;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.welcome, .question-box, .home-card {
+    text-align: center;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 35px #e8c9d6;
+}
+
+.small-text {
+    color: #d47798;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.welcome h1 {
+    font-size: 45px;
+}
+
+.court-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.reason, .promise {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    line-height: 1.8;
+    box-shadow: 0 10px 25px #e8c9d6;
+}
+
+.center-photo {
+    background: #f2d6e1;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.center-photo img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.question-box h1 {
+    font-size: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#noBtn {
+    background: #aaa;
+}
+
+#sadDog {
+    margin-top: 20px;
+}
+
+.dog {
+    font-size: 90px;
+    animation: sad 1s infinite alternate;
+}
+
+@keyframes sad {
+    from { transform: translateY(0); }
+    to { transform: translateY(8px); }
+}
+
+/* Couple website header */
+
+header {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px #e8c9d6;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav button {
+    margin: 5px;
+}
+
+/* Home */
+
+.home-photo {
+    width: 100%;
+    max-width: 550px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.counter-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.counter-card {
+    background: #fff1f6;
+    padding: 25px;
+    border-radius: 20px;
+    min-width: 200px;
+    flex: 1;
+}
+
+.counter-card h2 {
+    font-size: 40px;
+}
+
+.daily-message {
+    background: #fff4f7;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* Forms */
+
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px #e8c9d6;
+}
+
+/* Memories */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.memory-card {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #e8c9d6;
+    overflow: hidden;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.memory-card p {
+    margin: 10px 0;
+}
+
+.memory-card small {
+    color: #bb7996;
+}
+
+.memory-card button {
+    margin-right: 5px;
+}
+
+.saved-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    margin: 15px 0;
+    box-shadow: 0 8px 25px #e8c9d6;
+}
+
+.saved-card p {
+    white-space: pre-wrap;
+    margin: 10px 0;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #bd7694;
+}
+
+/* Phone screens */
+
+@media (max-width: 750px) {
+
+    .court-content {
+        grid-template-columns: 1fr;
+    }
+
+    .center-photo {
+        order: -1;
+    }
+
+    .center-photo img {
+        height: 300px;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+    .question-box h1 {
+        font-size: 28px;
+    }
+
+    .counter-container {
+        flex-direction: column;
+    }
+
+    .home-photo {
+        height: 260px;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav button {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+
+    .page {
+        padding: 15px 12px;
+    }
+
+}
