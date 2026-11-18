@@ -4,10 +4,10 @@
 ========================= */
 
 const CONFIG = {
-    herName: "Her Name",
-    yourName: "Your Name",
-    meetDate: "2026-12-25",
-    togetherDate: "2026-11-18"
+    herName: "BAJE",
+    yourName: "COB",
+    meetDate: "2026-5-7",
+    togetherDate: "0-0-0"
 };
 
 // Change the names above.
